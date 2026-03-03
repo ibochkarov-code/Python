@@ -7,7 +7,7 @@ def total_salary(path):
             for line in file:
                 line = line.strip()
 
-                # Пропускаем пустые строки
+                # Пропускаємо порожні рядки
                 if not line:
                     continue
 
@@ -16,7 +16,7 @@ def total_salary(path):
                     total += float(salary)
                     count += 1
                 except ValueError:
-                    print(f"Некорректный формат строки: {line}")
+                    print(f"Некоректний формат рядка: {line}")
 
         if count == 0:
             return (0, 0)
@@ -25,10 +25,10 @@ def total_salary(path):
         return (total, average)
 
     except FileNotFoundError:
-        print("Файл не найден.")
+        print("Файл не знайдено.")
         return (0, 0)
     except Exception as e:
-        print(f"Ошибка при обработке файла: {e}")
+        print(f"Помилка при обробці файлу: {e}")
         return (0, 0)
 
 salary_data = total_salary(r"C:\Users\38093\OneDrive\Рабочий стол\Python Learning Projects\salary.txt")

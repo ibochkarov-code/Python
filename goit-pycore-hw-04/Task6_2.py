@@ -6,7 +6,7 @@ def get_cats_info(path):
             for line in file:
                 line = line.strip()
 
-                # Пропускаем пустые строки
+                # Пропускаємо порожні рядки
                 if not line:
                     continue
 
@@ -22,15 +22,15 @@ def get_cats_info(path):
                     cats.append(cat_info)
 
                 except ValueError:
-                    print(f"Некорректный формат строки: {line}")
+                    print(f"Некоректный формат рядка: {line}")
 
         return cats
 
     except FileNotFoundError:
-        print("Файл не найден.")
+        print("Файл не знайдено.")
         return []
     except Exception as e:
-        print(f"Ошибка при обработке файла: {e}")
+        print(f"Помилка при обробці файлу: {e}")
         return []
 
 cats_info = get_cats_info(r"C:\Users\38093\OneDrive\Рабочий стол\Python Learning Projects\cats.txt")

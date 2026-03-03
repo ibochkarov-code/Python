@@ -4,10 +4,7 @@ from colorama import Fore, Style, init
 
 
 def print_tree(path: Path, prefix: str = "") -> None:
-    """
-    Prints directory tree starting from `path`.
-    Directories are colored differently from files.
-    """
+
     items = sorted(path.iterdir(), key=lambda p: (p.is_file(), p.name.lower()))
 
     for index, item in enumerate(items):
